@@ -16,14 +16,6 @@ session_start()
 <body>
     <?php if (false): ?>
         <div class="">
-            <h4>Bienvenue, <?php // Votre code ici pour afficher le nom de l'utilisateur connecté ?>
-            </h4>
-            <p>Email :
-                <strong><?php?></strong>
-            </p>
-            <p>Connecté depuis :
-                <strong><?php // Votre code ici pour afficher la date et l'heure de connexion ?></strong>
-            </p>
             <form method="post" action="">
                 <button type="submit" name="logout" value="0" class="btn btn-warning">Se
                     déconnecter</button>
@@ -33,13 +25,17 @@ session_start()
         <form method="post" action="">
             <div >
                 <label for="nom">Nom :</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
+                <input type="text" name="nom" required>
             </div>
             <div >
                 <label for="email">Email :</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input type="email" name="email" required>
             </div>
-            <button type="submit" name="login" value="0" class="btn btn-success">Se connecter</button>
+            <div>
+                <label for="mdp">Mots de Passe :</label>
+                <input type="text" name="mdp" required>
+            </div>
+            <button type="submit" name="login" value="0">Se connecter</button>
         </form>
     <?php endif; ?>
 </body>
